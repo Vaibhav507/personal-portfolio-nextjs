@@ -18,7 +18,7 @@ const HomeLayout = ({children}:{children : ReactNode}) => {
     <main className='relative overflow-x-hidden'>
         <Navbar toggleMenu={toggleMenu} />
         <div className="flex">
-            <section className="flex flex-1 min-h-screen px-8 sm:px-48 justify-start items-center">
+            <section className="flex flex-1 min-h-screen px-8 sm:px-28 md:px-48 justify-start items-center">
                     {children}
             </section>
         </div>

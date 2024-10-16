@@ -18,3 +18,27 @@ export const menuLinks = [
         route: '/contact',
     },
 ]
+
+export const socialLinks = [
+    {
+        name: 'Github',
+        icon: 'ri-github-fill',
+        href: 'https://github.com/Vaibhav507',
+        classIcon: 'githubIcon',
+        className: 'github'
+    },
+    {
+        name: 'Linkedin',
+        icon: 'ri-linkedin-fill',
+        href: 'https://www.linkedin.com/in/vaibhav-madan-386927200/',
+        classIcon: 'linkedinIcon',
+        className: 'linkedin'
+    },
+    {
+        name: 'Contact me Mail',
+        icon: 'ri-mail-fil',
+        href: 'mailto:vaibhavpratham507@gmail.com',
+        classIcon: 'mailIcon',
+        className: 'mail'
+    },
+]
