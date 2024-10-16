@@ -3,13 +3,13 @@ import React from 'react'
 const Home = () => {
   return (
     <section className='flex flex-col gap-10'>
-      <p className='uppercase text-xs sm:text-sm tracking-widest font-medium'>Hello there!</p>
-      <p className='text-3xl leading-tight font-bold lg:text-8xl md:text-6xl lg:leading-tight md:leading-tight'>
+      <p className='uppercase tracking-widest text-xs sm:text-[0.83vw] lg:tracking-widest '>Hello there!</p>
+      <p className='text-3xl leading-tight  lg:text-[6.04vw] md:text-6xl lg:leading-tight md:leading-tight'>
         I'm Vaibhav Madan, 
         <br />
         <span>
           a creative Frontend
-          </span>
+        </span>
         <br /> 
         developer.
         </p>

@@ -1,21 +1,28 @@
-import { Metadata } from 'next';
-import React, { ReactNode } from 'react';
-import Navbar from '@/components/Navbar';
+"use client"
 
-export const metadata: Metadata = {
-    title: "VaibhavMadan",
-    description: "Personal Portfolio",
-  };
+import { Metadata } from 'next';
+import React, { ReactNode, useState } from 'react';
+import Navbar from '@/components/Navbar';
+import Menu from '@/components/Menu';
+
+
 
 const HomeLayout = ({children}:{children : ReactNode}) => {
+
+  const [menuOpen, setmenuOpen] = useState(false);
+  const toggleMenu = () => {
+    setmenuOpen(!menuOpen)
+  }
+
   return (
-    <main className='relative'>
-        <Navbar />
+    <main className='relative overflow-x-hidden'>
+        <Navbar toggleMenu={toggleMenu} />
         <div className="flex">
             <section className="flex flex-1 min-h-screen px-8 sm:px-48 justify-start items-center">
                     {children}
             </section>
         </div>
+        <Menu menuOpen={menuOpen} toggleMenu={toggleMenu}/>
     </main>
   )
 }
