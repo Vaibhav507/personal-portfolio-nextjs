@@ -48,7 +48,7 @@ function About() {
         <>
         <div className="flex flex-col pt-40 gap-28 about-section">
             <div className="flex flex-col justify-center items-start gap-10">
-                <p className="uppercase tracking-widest text-xs sm:text-[0.83vw] md:text-[12px] lg:tracking-[3px] font-semibold">About Me</p>
+                <p className="uppercase tracking-widest text-xs sm:text-[12px] md:text-[12px] lg:tracking-[3px] font-semibold">About Me</p>
                 <p className="text-2xl leading-tight lg:text-5xl md:text-4xl lg:leading-tight md:leading-tight font-bold">
                 Driven by a passion for design and technology, I’m dedicated to crafting well-designed websites and apps.
                 I love blending creativity with technology, turning inspiration into unique digital experiences. My focus 
@@ -68,6 +68,10 @@ function About() {
                 <p className="text-[40px] leading-tight  lg:text-[6.04vw] md:text-6xl lg:leading-tight md:leading-tight">ReactJs</p>
                 <div className="h-[1px] bg-white divider"></div>
                 <p className="text-[40px] leading-tight  lg:text-[6.04vw] md:text-6xl lg:leading-tight md:leading-tight">GSAP</p>
+                <div className="h-[1px] bg-white divider"></div>
+                <p className="text-[40px] leading-tight  lg:text-[6.04vw] md:text-6xl lg:leading-tight md:leading-tight">Typescript</p>
+                <div className="h-[1px] bg-white divider"></div>
+                <p className="text-[40px] leading-tight  lg:text-[6.04vw] md:text-6xl lg:leading-tight md:leading-tight">NextJs</p>
                 <div className="h-[1px] bg-white divider"></div>
                 <p className="text-[40px] leading-tight  lg:text-[6.04vw] md:text-6xl lg:leading-tight md:leading-tight">Figma</p>
                 <div className="h-[1px] bg-white divider"></div>

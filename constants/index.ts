@@ -25,20 +25,22 @@ export const socialLinks = [
         icon: 'ri-github-fill',
         href: 'https://github.com/Vaibhav507',
         classIcon: 'githubIcon',
-        className: 'github'
+        className: 'github',
+        i:0
     },
     {
         name: 'Linkedin',
-        icon: 'ri-linkedin-fill',
         href: 'https://www.linkedin.com/in/vaibhav-madan-386927200/',
         classIcon: 'linkedinIcon',
-        className: 'linkedin'
+        className: 'linkedin',
+        i:1
     },
     {
         name: 'Contact me Mail',
         icon: 'ri-mail-fil',
         href: 'mailto:vaibhavpratham507@gmail.com',
         classIcon: 'mailIcon',
-        className: 'mail'
+        className: 'mail',
+        i:2
     },
 ]

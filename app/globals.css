@@ -29,7 +29,7 @@ body::before {
   left: 0;
   height: 100vh;
   width: 100%;
-  background-image: url(https://www.priyaty.com/images/noise.jpg);
+  background-image: url('../constants/noise.jpg');
   background-size: cover;
   opacity: .05;
 }

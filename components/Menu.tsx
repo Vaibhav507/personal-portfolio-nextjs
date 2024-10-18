@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
 import { menuLinks, socialLinks } from '@/constants';
 import Link from 'next/link';
-import { RiGithubFill, RiGithubLine, RiLinkedinLine, RiMailLine } from '@remixicon/react';
+import { RiGithubFill, RiGithubLine, RiLinkedinFill, RiLinkedinLine, RiMailFill, RiMailLine } from '@remixicon/react';
 import gsap from "gsap";
 import { useGSAP } from '@gsap/react';
 
@@ -52,15 +52,17 @@ const Menu = ({ menuOpen,toggleMenu }: {menuOpen: boolean; toggleMenu: ()=> void
 
     })
     
+   const socialIcons = [<RiGithubLine />,<RiLinkedinLine />,<RiMailLine />]
+
   return (
     <div className={`overflow-y-hidden fixed top-0 min-h-screen w-full bg-black flex justify-between items-center px-8 sm:px-48 transform ${menuOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-1000`}>
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-10 h-fit">
             {menuLinks.map((link) => {
                 const isActive = pathName === link.route || pathName.startsWith(`${link.route}/`);
 
                 return (
                     <Link href={link.route} key={link.label} className={isActive ? 'text-[#fff]' :'text-[#282828]'} >
-                        <p className="text-3xl leading-tight lg:text-7xl md:text-6xl lg:leading-tight md:leading-tight" onClick={toggleMenu}>
+                        <p className="text-4xl leading-tight lg:text-5xl xl:text-7xl md:text-5xl lg:leading-tight md:leading-tight" onClick={toggleMenu}>
                             {link.label}
                         </p>
                     </Link>
@@ -68,12 +70,12 @@ const Menu = ({ menuOpen,toggleMenu }: {menuOpen: boolean; toggleMenu: ()=> void
             })}
         </div>
         
-        <div className="socials flex flex-col gap-10">
+        <div className="absolute sm:bottom-40 bottom-10 right-8 lg:right-16 socials flex sm:flex-col gap-10 self-end">
             {socialLinks.map((link)=>{
                 return(
-                    <div key={link.name} className="flex justify-end items-center gap-4 social-1">
+                    <div key={link.i} className="flex justify-end items-center gap-4 social-1">
                         <p className={`social-name bg-white text-black rounded-full social-1 px-5 py-2 ${link.className}`}>{link.name}</p>
-                        <a href={link.href} target="_blank"><div color="white" className={`icons w-[30px] h-[30px] bg-[#222] rounded-full ${link.classIcon}`}></div></a>
+                        <a href={link.href} target="_blank"><div color="white" className={`icons flex justify-center items-center w-[50px] h-[50px] bg-[#222] rounded-full ${link.classIcon} p-3`}>{socialIcons[link.i]}</div></a>
                     </div>
                 )
             
