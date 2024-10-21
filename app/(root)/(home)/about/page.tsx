@@ -47,7 +47,7 @@ function About() {
     return(
         <>
         <div className="flex flex-col pt-40 gap-28 about-section">
-            <div className="flex flex-col justify-center items-start gap-10">
+            <div className="flex flex-col justify-center items-start gap-10 ">
                 <p className="uppercase tracking-widest text-xs sm:text-[12px] md:text-[12px] lg:tracking-[3px] font-semibold">About Me</p>
                 <p className="text-2xl leading-tight lg:text-5xl md:text-4xl lg:leading-tight md:leading-tight font-bold">
                 Driven by a passion for design and technology, I’m dedicated to crafting well-designed websites and apps.

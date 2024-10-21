@@ -1,6 +1,5 @@
 "use client"
 
-import { Metadata } from 'next';
 import React, { ReactNode, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Menu from '@/components/Menu';
