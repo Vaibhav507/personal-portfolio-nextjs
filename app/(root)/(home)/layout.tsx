@@ -2,7 +2,6 @@
 
 import React, { ReactNode, useState } from 'react';
 import Navbar from '@/components/Navbar';
-import Menu from '@/components/Menu';
 
 
 
@@ -15,13 +14,12 @@ const HomeLayout = ({children}:{children : ReactNode}) => {
 
   return (
     <main className='relative overflow-x-hidden'>
-        <Navbar toggleMenu={toggleMenu} />
+        <Navbar />
         <div className="flex">
             <section className="flex flex-1 min-h-screen px-8 sm:px-28 md:px-48 justify-start items-center">
                     {children}
             </section>
         </div>
-        <Menu menuOpen={menuOpen} toggleMenu={toggleMenu}/>
     </main>
   )
 }

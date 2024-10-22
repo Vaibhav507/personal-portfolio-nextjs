@@ -45,7 +45,7 @@ function contact() {
     gsap.set(".footer-buttons", {opacity: 0})
 
     
-    const tl1 = gsap.timeline({ delay: 2 });
+    const tl1 = gsap.timeline({ delay: 1.5 });
 
     
     tl1.to(split1.lines, {

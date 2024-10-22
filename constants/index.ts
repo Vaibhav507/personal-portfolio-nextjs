@@ -44,3 +44,5 @@ export const socialLinks = [
         i:2
     },
 ]
+
+export const skills = ["HTML","CSS","JavaScript","GSAP","ReactJs","NextJs","Typesript","Figma","Open to learning new tech"]

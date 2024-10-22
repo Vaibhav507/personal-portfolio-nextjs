@@ -5,10 +5,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 import { useGSAP } from '@gsap/react';
 import React from "react";
+import { skills } from "@/constants";
 
 //import Footer from "./Footer";
 
 function About() {
+
+    
 
     useGSAP(()=> {
         gsap.from(".skills p",{
@@ -38,10 +41,9 @@ function About() {
             x:-20,
             opacity: 0,
             stagger:0.5,
-            delay: 2,
+            delay: 1.5,
             scrollTrigger:".about-section"
         })
-
     })
 
     return(
@@ -58,28 +60,16 @@ function About() {
             </div>
             <div className="skills flex flex-col gap-4"> 
                 <h1 className="uppercase tracking-widest text-xs sm:text-[12px] md:text-[14px] lg:tracking-[3px] font-semibold">Tech stack</h1>
-                <div className="divider"></div>
-                <p className="text-[40px] leading-tight  lg:text-[6.04vw] md:text-6xl lg:leading-tight md:leading-tight">HTML</p>
-                <div className="h-[0.5px] bg-white divider"></div>
-                <p className="text-[40px] leading-tight  lg:text-[6.04vw] md:text-6xl lg:leading-tight md:leading-tight">CSS</p>
-                <div className="h-[1px] bg-white divider"></div>
-                <p className="text-[40px] leading-tight  lg:text-[6.04vw] md:text-6xl lg:leading-tight md:leading-tight">JavaScript</p>
-                <div className="h-[1px] bg-white divider"></div>
-                <p className="text-[40px] leading-tight  lg:text-[6.04vw] md:text-6xl lg:leading-tight md:leading-tight">ReactJs</p>
-                <div className="h-[1px] bg-white divider"></div>
-                <p className="text-[40px] leading-tight  lg:text-[6.04vw] md:text-6xl lg:leading-tight md:leading-tight">GSAP</p>
-                <div className="h-[1px] bg-white divider"></div>
-                <p className="text-[40px] leading-tight  lg:text-[6.04vw] md:text-6xl lg:leading-tight md:leading-tight">Typescript</p>
-                <div className="h-[1px] bg-white divider"></div>
-                <p className="text-[40px] leading-tight  lg:text-[6.04vw] md:text-6xl lg:leading-tight md:leading-tight">NextJs</p>
-                <div className="h-[1px] bg-white divider"></div>
-                <p className="text-[40px] leading-tight  lg:text-[6.04vw] md:text-6xl lg:leading-tight md:leading-tight">Figma</p>
-                <div className="h-[1px] bg-white divider"></div>
-                <p className="text-[40px] leading-tight  lg:text-[6.04vw] md:text-6xl lg:leading-tight md:leading-tight">Open to Learning new Tech</p>
-                <div className="h-[1px] bg-white w-0 divider"></div>
+                {skills.map((skill,index)=>{
+                    return (
+                        <div key={index}>
+                        <p className="text-[40px] leading-tight  lg:text-[6.04vw] md:text-6xl lg:leading-tight md:leading-tight">{skill}</p>
+                        <div className="h-[0.5px] bg-white divider"></div>
+                        </div>
+                    )
+                })}
             </div>
         </div>
-     
         </>
     )
 }
