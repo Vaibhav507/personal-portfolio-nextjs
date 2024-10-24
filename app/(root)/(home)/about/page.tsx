@@ -11,8 +11,6 @@ import { skills } from "@/constants";
 
 function About() {
 
-    
-
     useGSAP(()=> {
         gsap.from(".skills p",{
             opacity: 0,
@@ -41,29 +39,29 @@ function About() {
             x:-20,
             opacity: 0,
             stagger:0.5,
-            delay: 1.5,
+            delay: 1,
             scrollTrigger:".about-section"
         })
-    })
+    });
 
     return(
         <>
         <div className="flex flex-col pt-40 gap-28 about-section">
             <div className="flex flex-col justify-center items-start gap-10 ">
-                <p className="uppercase tracking-widest text-xs sm:text-[12px] md:text-[12px] lg:tracking-[3px] font-semibold">About Me</p>
-                <p className="text-2xl leading-tight lg:text-5xl md:text-4xl lg:leading-tight md:leading-tight font-bold">
-                Driven by a passion for design and technology, I’m dedicated to crafting well-designed websites and apps.
-                I love blending creativity with technology, turning inspiration into unique digital experiences. My focus 
+                <p className="uppercase text-xs tracking-[3px] sm:text-[14px] lg:text-[0.83vw] font-bold">About Me</p>
+                <p className="text-2xl font-bold leading-[1.3] md:text-[32px] lg:text-[2.9vw] lg:leading-tight">
+                Driven by a passion for design and technology, I’m dedicated to crafting well-designed websites, 
+                blending creativity with technology. My focus 
                 is on creating user-friendly designs with attention to detail, ensuring each project is both visually 
                 stunning and highly functional.
                 </p>
             </div>
             <div className="skills flex flex-col gap-4"> 
-                <h1 className="uppercase tracking-widest text-xs sm:text-[12px] md:text-[14px] lg:tracking-[3px] font-semibold">Tech stack</h1>
+                <h1 className="uppercase text-xs tracking-[3px] sm:text-[14px] lg:text-[0.83vw] font-bold">Tech stack</h1>
                 {skills.map((skill,index)=>{
                     return (
                         <div key={index}>
-                        <p className="text-[40px] leading-tight  lg:text-[6.04vw] md:text-6xl lg:leading-tight md:leading-tight">{skill}</p>
+                        <p className="text-[40px] leading-tight  min-[480px]:text-[60px] md:text-[80px] lg:text-[6.04vw] font-normal">{skill}</p>
                         <div className="h-[0.5px] bg-white divider"></div>
                         </div>
                     )
@@ -71,7 +69,7 @@ function About() {
             </div>
         </div>
         </>
-    )
-}
+    );
+};
 
-export default About
+export default About;

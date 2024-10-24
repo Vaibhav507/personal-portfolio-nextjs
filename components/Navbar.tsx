@@ -7,37 +7,50 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
 const Navbar = () => {
+
   const pathName = usePathname();
   const [menuState, setMenuState] = useState('closed');
-  
-  
-  const menuOpenTimeline = useRef<gsap.core.Timeline | null>(null); 
+  const menuOpenTimeline = useRef<gsap.core.Timeline | null>(null);
+  var pathUpper = "M 5 33 L 33 5";
+  var pathLower = "M 5 5 L 33 33";
+  const socialIcons = [<RiGithubLine />, <RiLinkedinLine />, <RiMailLine />];
+
 
   useGSAP(() => {
     menuOpenTimeline.current = gsap.timeline({ paused: true })
 
+      menuOpenTimeline.current.to(".upper", {
+          attr: {d: pathUpper},
+          duration: 0.5,
+      },0)
+
+      
+      menuOpenTimeline.current.to(".lower", {
+        attr: {d: pathLower},
+        duration: 0.5,
+      },0)
+
       menuOpenTimeline.current.to('.menu', {
         transform: 'translateY(0%)',
         duration: 1,
-      })
+      },0)
 
       menuOpenTimeline.current.to('.pages p', {
           opacity: 1,
           y: 0,
-          display: 'block',
           ease: 'circ',
-        },1)
+        },1);
 
       menuOpenTimeline.current.to('.icons', {
           opacity: 1,
           y: 0,
-          visibility: 'visible',
           ease: 'circ',
         },1);
 
   }); 
 
   useGSAP(()=>{
+
       const setupIconAnimation = (iconSelector: string, animationTarget: string): void => {
       const icon = document.querySelector<HTMLElement>(iconSelector);
       const tl = gsap.timeline({ paused: true });
@@ -49,13 +62,13 @@ const Navbar = () => {
     
       icon?.addEventListener("mouseenter", () => tl.play());
       icon?.addEventListener("mouseleave", () => tl.reverse());
-    };
+      };
     
-    setupIconAnimation(".githubIcon", ".github");
-    setupIconAnimation(".linkedinIcon", ".linkedin");
-    setupIconAnimation(".mailIcon", ".mail");
+      setupIconAnimation(".githubIcon", ".github");
+      setupIconAnimation(".linkedinIcon", ".linkedin");
+      setupIconAnimation(".mailIcon", ".mail");
     
-  })
+  });
  
   function toggleMenu() {
     if (menuState === 'closed') {
@@ -65,9 +78,7 @@ const Navbar = () => {
       setMenuState('closed');
       menuOpenTimeline.current?.reverse();
     }
-  }
-
-  const socialIcons = [<RiGithubLine />, <RiLinkedinLine />, <RiMailLine />];
+  };
 
   return (
     <>
@@ -75,7 +86,11 @@ const Navbar = () => {
         <Link href='/'>
           <div className="bg-white rounded-full w-5 h-5"></div>
         </Link>
-        <p onClick={toggleMenu}>menu-icon</p>
+        <svg className="size-6 md:size-8 lg:size-10 xl:size-12 menu-icon cursor-pointer" onClick={toggleMenu} viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 1 14 L 38 14" stroke="currentColor" strokeWidth="2" className='upper'></path>
+          <path d="M 1 26 L 38 26" stroke="currentColor" strokeWidth="2" className='lower'></path>
+        </svg>
+        
       </nav>
 
       <div className="menu z-20 overflow-y-hidden fixed top-0 min-h-screen w-full bg-black flex justify-end gap-20 items-start flex-col sm:justify-between sm:items-end sm:flex-row sm:pb-32 pb-12 px-8 lg:px-16 transform translate-y-full">
@@ -85,7 +100,7 @@ const Navbar = () => {
 
             return (
               <Link href={link.route} key={link.label} className={isActive ? 'text-[#fff]' : 'text-[#282828]'}>
-                <p className="text-4xl leading-tight lg:text-5xl xl:text-7xl md:text-5xl lg:leading-tight md:leading-tight cursor:pointer opacity-0 translate-y-12 hidden" onClick={toggleMenu}>
+                <p className="text-4xl leading-tight lg:text-5xl xl:text-7xl md:text-5xl lg:leading-tight md:leading-tight cursor-pointer opacity-0 translate-y-12 " onClick={toggleMenu}>
                   {link.label}
                 </p>
               </Link>
@@ -113,3 +128,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+

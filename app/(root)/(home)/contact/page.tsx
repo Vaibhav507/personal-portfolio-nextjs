@@ -45,7 +45,7 @@ function contact() {
     gsap.set(".footer-buttons", {opacity: 0})
 
     
-    const tl1 = gsap.timeline({ delay: 1.5 });
+    const tl1 = gsap.timeline({ delay: 1 });
 
     
     tl1.to(split1.lines, {
@@ -80,8 +80,8 @@ function contact() {
     return (
         <div className="flex flex-col gap-10 sm:gap-20 pt-36 sm:pt-10 w-full">
             <div className="flex flex-col gap-6 sm:gap-10" ref={paragraphRef}>
-                <p className="uppercase tracking-widest text-xs sm:text-[10px] md:text-[12px] lg:tracking-[3px] font-semibold">Say Hello?</p>
-                <p className="text-3xl leading-tight lg:text-5xl xl:text-6xl md:text-4xl lg:leading-tight md:leading-tight" >Let's collaborate. Feel free to drop me a line about your project or follow me on social networks</p>
+                <p className="uppercase text-xs tracking-[3px] sm:text-[14px] lg:text-[0.83vw] font-bold">Say Hello?</p>
+                <p className="text-2xl font-bold leading-[1.3] md:text-[32px] lg:text-[2.9vw] lg:leading-tight">Let's collaborate. Feel free to drop me a line about your project or follow me on social networks</p>
             </div>
             <div className="divider h-[1px] bg-white"></div>
             <div className="contact-bottom">
