@@ -2,7 +2,7 @@ import React from 'react'
 
 const projects = () => {
   return (
-    <div>projects</div>
+    <p className='text-[40px] leading-tight  min-[480px]:text-[60px] md:text-[80px] lg:text-[6.04vw] font-bold'>Coming Soon</p>
   )
 }
 

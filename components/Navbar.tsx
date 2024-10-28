@@ -80,6 +80,27 @@ const Navbar = () => {
     }
   };
 
+  useGSAP(()=>{
+
+    const pages = document.querySelector(".pages p")
+
+    const randomTimeline = gsap.timeline({ paused: true })
+
+    randomTimeline.to(pages,{
+      color:"#fff"
+    })
+
+    pages?.addEventListener("mouseenter",()=>
+      randomTimeline.play()
+    )
+
+    pages?.addEventListener("mouseenter",()=>
+      randomTimeline.reverse()
+    )
+
+  });
+
+
   return (
     <>
       <nav className='flex justify-between items-center fixed z-50 w-full px-8 py-8 lg:px-16'>

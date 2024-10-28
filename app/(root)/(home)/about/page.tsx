@@ -6,6 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 import { useGSAP } from '@gsap/react';
 import React from "react";
 import { skills } from "@/constants";
+import Footer from "@/components/Footer";
 
 //import Footer from "./Footer";
 
@@ -57,7 +58,6 @@ function About() {
                 </p>
             </div>
             <div className="skills flex flex-col gap-4"> 
-                <h1 className="uppercase text-xs tracking-[3px] sm:text-[14px] lg:text-[0.83vw] font-bold">Tech stack</h1>
                 {skills.map((skill,index)=>{
                     return (
                         <div key={index}>
@@ -67,7 +67,9 @@ function About() {
                     )
                 })}
             </div>
+            <Footer></Footer>
         </div>
+        
         </>
     );
 };

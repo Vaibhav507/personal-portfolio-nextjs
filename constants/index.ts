@@ -36,7 +36,7 @@ export const socialLinks = [
         i:1
     },
     {
-        name: 'Contact me Mail',
+        name: 'Contact on Mail',
         icon: 'ri-mail-fil',
         href: 'mailto:vaibhavpratham507@gmail.com',
         classIcon: 'mailIcon',
