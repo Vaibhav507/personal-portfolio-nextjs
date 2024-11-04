@@ -37,12 +37,12 @@ function Footer() {
         },0)
 
         tl.pause()
-        // @ts-expect-error
+        // @ts-expect-error: err
         buttonRef.current.addEventListener("mouseenter",function () {
             tl.play()
             
         })
-        // @ts-expect-error
+        // @ts-expect-error: err
         buttonRef.current.addEventListener("mouseleave",function () {
             tl.reverse()
         })

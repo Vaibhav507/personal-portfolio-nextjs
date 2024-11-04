@@ -25,18 +25,18 @@ function Contact() {
         },0)
 
         tl.pause()
-        // @ts-expect-error
+        // @ts-expect-error: err
         buttonRef.current.addEventListener("mouseenter",function () {
             tl.play()
             
         })
-        // @ts-expect-error
+        // @ts-expect-error: err
         buttonRef.current.addEventListener("mouseleave",function () {
             tl.reverse()
         })
-        // @ts-expect-error
+        // @ts-expect-error: err
         const split1 = new SplitType(paragraphRef.current.children[0], { types: "lines" });
-        // @ts-expect-error
+        // @ts-expect-error: err
         const split2 = new SplitType(paragraphRef?.current.children[1], { types: "lines" });
 
     
