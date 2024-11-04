@@ -26,7 +26,7 @@ const HomeLayout = ({children}:{children : ReactNode}) => {
 
   return (
     <main className='relative overflow-x-hidden'>
-      <div className="h-5 w-5 bg-white rounded-full fixed z-[100] mix-blend-difference" id='cursor'></div>
+      <div className="h-5 w-5 bg-white rounded-full fixed z-[100] mix-blend-difference hidden xl:block" id='cursor'></div>
         <Navbar />
         <div className="flex">
             <section className="flex flex-1 min-h-screen px-8 sm:px-28 md:px-48 justify-start items-center">

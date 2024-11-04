@@ -21,7 +21,7 @@ function About() {
                 trigger: ".skills",
                 scrub: true,
                 end: "bottom bottom",
-                start: "top center"
+                start: "top center",
             }
         })
 
