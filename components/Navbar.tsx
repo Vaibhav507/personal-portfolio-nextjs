@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-key */
+
 import { menuLinks, socialLinks } from '@/constants';
 import { useRef, useState } from 'react';
 import { RiGithubLine, RiLinkedinLine, RiMailLine } from '@remixicon/react';
