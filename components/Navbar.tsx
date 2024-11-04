@@ -120,7 +120,7 @@ const Navbar = () => {
             const isActive = pathName === link.route || pathName.startsWith(`${link.route}/`);
 
             return (
-              <Link href={link.route} key={link.label} className={isActive ? 'text-[#fff]' : 'text-[#282828]'}>
+              <Link href={link.route} className={isActive ? 'text-[#fff]' : 'text-[#282828]'}>
                 <p className="text-4xl leading-tight lg:text-5xl xl:text-7xl md:text-5xl lg:leading-tight md:leading-tight cursor-pointer opacity-0 translate-y-12 " onClick={toggleMenu}>
                   {link.label}
                 </p>
