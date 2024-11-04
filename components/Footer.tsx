@@ -37,23 +37,23 @@ function Footer() {
         },0)
 
         tl.pause()
-        // @ts-ignore
+        // @ts-expect-error
         buttonRef.current.addEventListener("mouseenter",function () {
             tl.play()
             
         })
-        // @ts-ignore
+        // @ts-expect-error
         buttonRef.current.addEventListener("mouseleave",function () {
             tl.reverse()
         })
     })
 
-    let currentYear = new Date().getFullYear()
+    const currentYear = new Date().getFullYear()
 
     return(
         <div className="flex flex-col pt-40 gap-10  pb-20 sm:pb-36 footer">
             <p className="uppercase text-xs tracking-[3px] sm:text-[14px] lg:text-[0.83vw] font-bold greeting">Like What you see?</p>
-            <p className="text-[40px] leading-tight  min-[480px]:text-[60px] md:text-[80px] lg:text-[6.04vw] font-bold intro">Let's Talk</p>
+            <p className="text-[40px] leading-tight  min-[480px]:text-[60px] md:text-[80px] lg:text-[6.04vw] font-bold intro">Let&apos;s Talk</p>
             <div className="footer-buttons contact-me-bottom flex flex-col justify-center items-start sm:flex-row gap-8 sm:gap-0 sm:justify-between ">
                 <a href="mailto:vaibhavpratham507@gmail.com" className="mail-contact-me w-full sm:w-[auto]"><div className="goto-mail bg-[#333] flex justify-center items-center py-5 px-14 rounded-full gap-4 hover:bg-white hover:text-[#111]" ref={buttonRef}><p className="button-text">Send me a mail</p><RiArrowRightUpLine className="arrow" /></div></a>
                 <div className="flex gap-4">

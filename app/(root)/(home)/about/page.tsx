@@ -8,8 +8,6 @@ import React from "react";
 import { skills } from "@/constants";
 import Footer from "@/components/Footer";
 
-//import Footer from "./Footer";
-
 function About() {
 
     useGSAP(()=> {

@@ -1,6 +1,6 @@
 "use client"
 
-import React, { ReactNode, useState } from 'react';
+import React, { ReactNode } from 'react';
 import Navbar from '@/components/Navbar';
 import { useGSAP } from '@gsap/react'
 import gsap from "gsap";
@@ -19,10 +19,6 @@ const HomeLayout = ({children}:{children : ReactNode}) => {
     })
   })
 
-  const [menuOpen, setmenuOpen] = useState(false);
-  const toggleMenu = () => {
-    setmenuOpen(!menuOpen)
-  }
 
   return (
     <main className='relative overflow-x-hidden'>

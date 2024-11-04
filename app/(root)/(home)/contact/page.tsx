@@ -9,7 +9,7 @@ import SplitType from 'split-type'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-function contact() {
+function Contact() {
 
     const paragraphRef = useRef(null);
     const buttonRef = useRef(null)
@@ -25,18 +25,18 @@ function contact() {
         },0)
 
         tl.pause()
-        // @ts-ignore
+        // @ts-expect-error
         buttonRef.current.addEventListener("mouseenter",function () {
             tl.play()
             
         })
-        // @ts-ignore
+        // @ts-expect-error
         buttonRef.current.addEventListener("mouseleave",function () {
             tl.reverse()
         })
-        // @ts-ignore
+        // @ts-expect-error
         const split1 = new SplitType(paragraphRef.current.children[0], { types: "lines" });
-        // @ts-ignore
+        // @ts-expect-error
         const split2 = new SplitType(paragraphRef?.current.children[1], { types: "lines" });
 
     
@@ -81,7 +81,7 @@ function contact() {
         <div className="flex flex-col gap-10 sm:gap-20 pt-36 sm:pt-10 w-full">
             <div className="flex flex-col gap-6 sm:gap-10" ref={paragraphRef}>
                 <p className="uppercase text-xs tracking-[3px] sm:text-[14px] lg:text-[0.83vw] font-bold">Say Hello?</p>
-                <p className="text-2xl font-bold leading-[1.3] md:text-[32px] lg:text-[2.9vw] lg:leading-tight">Let's collaborate. Feel free to drop me a line about your project or follow me on social networks</p>
+                <p className="text-2xl font-bold leading-[1.3] md:text-[32px] lg:text-[2.9vw] lg:leading-tight">Let&apos;s collaborate. Feel free to drop me a line about your project or follow me on social networks</p>
             </div>
             <div className="divider h-[1px] bg-white"></div>
             <div className="contact-bottom">
@@ -99,18 +99,5 @@ function contact() {
     )
 }
 
-/*.footer-icons {
-  background-color: #222;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  padding: 10px;
-}
 
-.footer-icons:hover {
-  background-color: white;
-  color: #111;
-  scale: 1.1;
-}*/
-
-export default contact
+export default Contact

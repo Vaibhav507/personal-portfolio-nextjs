@@ -1,5 +1,5 @@
 import { menuLinks, socialLinks } from '@/constants';
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useState } from 'react';
 import { RiGithubLine, RiLinkedinLine, RiMailLine } from '@remixicon/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -11,8 +11,8 @@ const Navbar = () => {
   const pathName = usePathname();
   const [menuState, setMenuState] = useState('closed');
   const menuOpenTimeline = useRef<gsap.core.Timeline | null>(null);
-  var pathUpper = "M 5 33 L 33 5";
-  var pathLower = "M 5 5 L 33 33";
+  const pathUpper = "M 5 33 L 33 5";
+  const pathLower = "M 5 5 L 33 33";
   const socialIcons = [<RiGithubLine />, <RiLinkedinLine />, <RiMailLine />];
 
 

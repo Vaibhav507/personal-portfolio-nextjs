@@ -27,7 +27,7 @@ const Home = () => {
     <section className='flex flex-col gap-10'>
       <p className='uppercase text-xs tracking-[3px] sm:text-[14px] lg:text-[0.83vw] font-bold greeting'>Hello there!</p>
       <p className='text-[40px] leading-tight  min-[480px]:text-[60px] md:text-[80px] lg:text-[6.04vw] font-bold intro'>
-        I'm Vaibhav Madan, 
+        I&apos;m Vaibhav Madan, 
         <br />
         <span>
           a creative Frontend
