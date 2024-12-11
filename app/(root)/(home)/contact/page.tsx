@@ -78,7 +78,7 @@ function Contact() {
     })
 
     return (
-        <div className="flex flex-col gap-10 sm:gap-20 pt-36 sm:pt-10 w-full">
+        <div className="flex flex-col gap-10 sm:gap-20 pt-36 sm:pt-10 w-full cursor-default">
             <div className="flex flex-col gap-6 sm:gap-10" ref={paragraphRef}>
                 <p className="uppercase text-xs tracking-[3px] sm:text-[14px] lg:text-[0.83vw] font-bold">Say Hello?</p>
                 <p className="text-2xl font-bold leading-[1.3] md:text-[32px] lg:text-[2.9vw] lg:leading-tight">Let&apos;s collaborate. Feel free to drop me a line about your project or follow me on social networks</p>

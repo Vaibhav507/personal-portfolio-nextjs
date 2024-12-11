@@ -45,7 +45,7 @@ function About() {
 
     return(
         <>
-        <div className="flex flex-col pt-40 gap-28 about-section">
+        <div className="flex flex-col pt-40 gap-28 about-section cursor-default">
             <div className="flex flex-col justify-center items-start gap-10 ">
                 <p className="uppercase text-xs tracking-[3px] sm:text-[14px] lg:text-[0.83vw] font-bold">About Me</p>
                 <p className="text-2xl font-bold leading-[1.3] md:text-[32px] lg:text-[2.9vw] lg:leading-tight">
